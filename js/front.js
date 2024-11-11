@@ -16,17 +16,7 @@ $(document).ready(function(){
 	$("#convert").click(onConvertRegex);
 	$(".stepbutton").click(clickStepButton);
 
-	$(".helpbutton").click(function() {
-		$(".helpmenu").toggleClass("helpmenu_selected");
-	})
-	$(".helpexit").click(function() {
-		$(".helpmenu").removeClass("helpmenu_selected");
-	})
-	$(".helpsectionbutton").click(function() { // Scroll to the clicked section
-		$(".helpcontent").stop().animate({
-			scrollTop: $(this.getAttribute("section"))[0].offsetTop
-		}, 600);
-	})
+	
 	$(".examplebutton").click(function() {
 		$("#regex").val("a*(b+a|de*)*a*"); // Example regular expression
 		$("#regex").trigger("input");
